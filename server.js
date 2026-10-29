@@ -1,17 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const cors = require("cors");
 const Contact = require("./models/Contact");
 require("dotenv").config();
 
 const port = 3000
 const app = express();
-// Allow requests from your frontend
-app.use(cors({
-    origin: "https://portfolio-ayomide11.vercel.app/", // Change to your frontend URL
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-}));
+
 
 app.use(express.json());
 
