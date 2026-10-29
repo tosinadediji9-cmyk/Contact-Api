@@ -8,7 +8,7 @@ const port = 3000
 const app = express();
 // Allow requests from your frontend
 app.use(cors({
-    origin: "https://tosinadediji9-cmyk.github.io/", // Change to your frontend URL
+    origin: "https://portfolio-ayomide11.vercel.app/", // Change to your frontend URL
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
