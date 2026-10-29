@@ -3,11 +3,19 @@ const mongoose = require("mongoose");
 const Contact = require("./models/Contact");
 require("dotenv").config();
 
+const cors = require("cors");
+
 const port = 3000
 const app = express();
-
+// Allow requests from your frontend
+app.use(cors({
+    origin: "https://ayomide-portfolio-flame.vercel.app/", // Change to your frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 app.use(express.json());
+
 
 mongoose
     .connect(process.env.MONGODB_URI)
